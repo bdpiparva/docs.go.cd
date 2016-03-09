@@ -26,9 +26,7 @@ NameVirtualHost nnn.nnn.nnn.nnn:80
 </VirtualHost>
 ```
 
-## OAuth 2.0 with Apache
-
-If you have set up Go to use [OAuth 2.0 gadgets](../integration/mingle_in_go.md) and Go is fronted with an Apache server, then you have to set X\_FORWARDED\_PROTO to "https" in the https virtual host configuration section.
+If you have set up Apache to use SSL, and Go is fronted with an Apache server, then you have to set `X_FORWARDED_PROTO` to "https" in the https virtual host configuration section.
 
 ```apache
 RequestHeader set X_FORWARDED_PROTO 'https'
